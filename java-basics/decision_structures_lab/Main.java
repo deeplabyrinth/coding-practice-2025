@@ -9,5 +9,13 @@ public class Main {
 		int numOfDimes = 5;
 		int numOfQuarters = 1;
 		boolean result = Answer.isADollar(numOfPennies, numOfNickels, numOfDimes, numOfQuarters);
+
+		switch (result) {
+			case true:
+				System.out.println("You win!");
+				break;
+			default:
+				System.out.println("You lose.");
+		}
 	}
 }
