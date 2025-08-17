@@ -10,12 +10,10 @@ public class Main {
 		int numOfQuarters = 1;
 		boolean result = Answer.isADollar(numOfPennies, numOfNickels, numOfDimes, numOfQuarters);
 
-		switch (result) {
-			case true:
-				System.out.println("You win!");
-				break;
-			default:
-				System.out.println("You lose.");
+		if (result) {
+			System.out.println("You win!");
+		} else {
+			System.out.println("You lose.");
 		}
 	}
 }
