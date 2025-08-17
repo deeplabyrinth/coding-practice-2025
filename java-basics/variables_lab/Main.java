@@ -9,5 +9,6 @@ public class Main {
 		String adjective = "cold";
 		String result = Answer.fillInTheBlank(season, numberOfCups, adjective);
 
+		System.out.println(result);
 	}
 }

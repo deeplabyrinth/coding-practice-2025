@@ -7,7 +7,7 @@ public class Answer {
 		// TODO: Add variables to string block to create a story
 		String story = """
 			On a %s %s day, I drink a minimum of %d cups of coffee.
-			""".format(adjective, season, numberOfCups);
+			""".formatted(adjective, season, numberOfCups);
 		return story;
 	}
 }
