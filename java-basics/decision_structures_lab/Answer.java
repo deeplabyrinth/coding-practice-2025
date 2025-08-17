@@ -18,7 +18,8 @@ public class Answer {
 			       (nickel * numOfNickels) +
 			       (dime * numOfDimes) +
 			       (quarter * numOfQuarters);
-		System.out.println(total);
+
+		won = (total == 1.00);
 
 		return won;
 	}
