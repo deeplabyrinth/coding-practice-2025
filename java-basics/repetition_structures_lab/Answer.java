@@ -22,7 +22,21 @@ public class Answer {
 		 * return String.format(tooLow, currentSpace);
 		 */
 
-		return "";
+		for (int i = 0; i < maxRolls; ++i) {
+
+			int die = random.nextInt(1, 7);
+			currentSpace += die;
+
+			if (currentSpace == lastSpace) {
+				return String.format(justRight, currentSpace);
+			}
+		}
+
+		if (currentSpace < lastSpace) {
+			return String.format(tooLow, currentSpace);
+		}
+
+		return String.format(tooHigh, lastSpace);
 
 	}
 }
