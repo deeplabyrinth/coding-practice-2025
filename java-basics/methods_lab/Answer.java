@@ -2,10 +2,12 @@ package methods_lab;
 
 public class Answer {
 
-	static double calculateNumbers(int firstNumber, int secondNumbers) {
+	static double calculateNumbers(int firstNumber, int secondNumber) {
+
+		double result = 0;
 
 		result = add(firstNumber, secondNumber);
-		result = subtract(firstnNumber, secondNumber);
+		result = subtract(firstNumber, secondNumber);
 		result = multiply(firstNumber, secondNumber);
 		result = divide(firstNumber, secondNumber);
 
