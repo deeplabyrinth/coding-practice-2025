@@ -4,13 +4,10 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		String answer = "The name of this method is fooBar";
-		String methodName = Answer.getMethodName();
+		int firstNumber = 40;
+		int secondNumber = 5;
+		double result = Answer.calculateNumbers(firstNumber, secondNumber);
 
-		if (methodName.equals(answer)) {
-			System.out.println("Correct! Answer: " + answer);
-		} else {
-			System.out.println("Uh oh, the answer was incorrect.");
-		}
+		System.out.println(result);
 	}
 }
