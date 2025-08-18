@@ -17,5 +17,5 @@ Create and return a constructed Car object.
 None
 
 #### Example
-Input: ```"Honda", "Accord", 2024, "blue"```
+Input: ```"Honda", "Accord", 2024, "blue"```\
 Result: ```Car [Make: Honda, Model: Accord, Year: 2024, Color: blue]```
