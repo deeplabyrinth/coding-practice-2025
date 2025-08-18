@@ -24,7 +24,7 @@ public class Answer {
 
 		for (int i = 0; i < maxRolls; ++i) {
 
-			int die = random.nextInt(1, 7);
+			int die = random.nextInt(6) + 1;
 			currentSpace += die;
 
 			if (currentSpace == lastSpace) {
