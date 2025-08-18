@@ -28,3 +28,29 @@ B   I   N   G   O
 12  25  43  51  73
 13  30  45  54  74
 ``` 
+
+#### Challenges I faced
+- Got ```cannot find symbol: class BingoCard``` because I only compiled ```Main.java``` while BingoCard was inside ```Answer.java.``` Fixed by compiling both together (```javac Main.java Answer.java```) or by moving ```BingoCard``` into its own file.
+
+- Later hit ```Could not find or load main class arrays_lab.Main``` due to the ```package arrays_lab;``` declaration. Learned that I must run from the parent directory (```java arrays_lab.Main```) or use ```-cd ..``` if inside the folder or remove the package declaration altogether (better for smaller projects anyway).
+
+A more detailed explanation below
+---
+* While working on my BingoCard program, I ran into an issue where Java couldn’t find or load the ```arrays_lab.Main``` class. The problem was caused by the ```package arrays_lab;``` declaration — when running inside the ```arrays_lab``` folder, the JVM was looking in the wrong place (```arrays_lab/arrays_lab/Main.class```).
+
+I learned that with packages, Java expects you to compile and run from the parent directory, using:
+
+```javac arrays_lab/Main.java arrays_lab/Answer.java
+java arrays_lab.Main```
+
+
+Alternatively, removing the ```package``` line lets everything sit in the default package, making it simpler (```java Main```), but less realistic for larger projects.
+
+* Initially, I got a ```cannot find symbol: class BingoCard``` error when compiling. This happened because the BingoCard class was defined inside ```Answer.java``` but I only tried to compile ```Main.java```.
+
+I learned that Java only knows about classes that have been compiled, so if a class depends on another file, I need to compile both together:
+
+```javac Main.java Answer.java```
+
+
+Alternatively, I could move ```BingoCard``` into its own file (```BingoCard.java```) and make it ```public```, which is the more standard approach.
