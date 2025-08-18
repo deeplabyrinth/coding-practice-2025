@@ -26,17 +26,17 @@ public class Answer {
 
 			int die = random.nextInt(6) + 1;
 			currentSpace += die;
+			System.out.println("You rolled a " + die);
 
 			if (currentSpace == lastSpace) {
 				return String.format(justRight, currentSpace);
+			} else if (i == maxRolls - 1 && currentSpace < lastSpace) {
+				return String.format(tooLow, currentSpace);
+			} else if (i == maxRolls - 1 && currentSpace > lastSpace) {
+				return String.format(tooHigh, currentSpace);
 			}
 		}
 
-		if (currentSpace < lastSpace) {
-			return String.format(tooLow, currentSpace);
-		}
-
-		return String.format(tooHigh, lastSpace);
-
+		return "error";
 	}
 }
