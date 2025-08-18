@@ -2,15 +2,17 @@ package objects_lab;
 
 public class Answer {
 
-	static Car buildCar(String make, String model, int year, String, color) {
+	static Car buildCar(String make, String model, int year, String color) {
 
-		Car car = new Car();
+		Car car = new Car(make, model);
+		car.setYear(year);
+		car.setColor(color);
 
 		return car;
 	}
 }
 
-public class Car {
+class Car {
 
 	private String make;
 	private String model;
@@ -26,4 +28,36 @@ public class Car {
 		this.make = make;
 	}
 
+	public void setModel(String model) {
+		this.model = model;
+	}
+
+	public void setYear(int year) {
+		this.year = year;
+	}
+
+	public void setColor(String color) {
+		this.color = color;
+	}
+
+	public String getMake() {
+		return make;
+	}
+
+	public String getModel() {
+		return model;
+	}
+
+	public int getYear() {
+		return year;
+	}
+
+	public String getColor() {
+		return color;
+	}
+
+	@Override
+	public String toString() {
+		return String.format("Car [Make: %s, Model: %s, Year: %d, Color: %s]", make, model, year, color);
+	}
 }

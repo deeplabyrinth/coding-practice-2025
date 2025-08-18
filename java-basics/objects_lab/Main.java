@@ -8,8 +8,8 @@ public class Main {
 		String model = "Silverado";
 		int year = 2006;
 		String color = "grey";
-		result = Answer.buildCar(make, model, year, color);
+		var result = Answer.buildCar(make, model, year, color);
 
-		result.toString();
+		System.out.println(result.toString());
 	}
 }
