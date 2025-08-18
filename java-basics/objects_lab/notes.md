@@ -21,4 +21,7 @@ Input: ```"Honda", "Accord", 2024, "blue"```\
 Result: ```Car [Make: Honda, Model: Accord, Year: 2024, Color: blue]```
 
 #### Challenges I faced
+- Mistakenly defined a nested class with the access modifier ```public```
+- Any class definition with the keyword ```public``` must go in its own separate class file
+- Or omit the keyword, making it package-private (only accessibly by other classes in the same package)
 
