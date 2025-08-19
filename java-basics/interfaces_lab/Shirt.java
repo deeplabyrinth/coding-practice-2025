@@ -13,9 +13,11 @@ public class Shirt implements Product {
 		setColor(color);
 	}
 
+	@Override
 	public void setName(String name) { // implemented from Product
 		this.name = name;
 	}
+	@Override
 	public void setPrice(double price) { // implemented from Product
 		this.price = price;
 	}
@@ -25,9 +27,11 @@ public class Shirt implements Product {
 	public void setColor(String color) {
 		this.color = color;
 	}
+	@Override
 	public String getName() {
 		return name;
 	}
+	@Override
 	public double getPrice() {
 		return price;
 	}
