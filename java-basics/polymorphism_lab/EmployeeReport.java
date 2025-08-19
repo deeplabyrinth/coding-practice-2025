@@ -36,7 +36,7 @@ public class EmployeeReport {
 		return engineerCount;
 	}
 
-	public in getInternCount() {
+	public int getInternCount() {
 		return internCount;
 	}
 }

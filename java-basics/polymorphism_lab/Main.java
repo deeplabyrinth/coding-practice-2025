@@ -13,5 +13,13 @@ public class Main {
 		};
 
 		EmployeeReport report = Answer.generateReport(employees);
+		System.out.println("""
+				Managers: %d
+				Engineers: %d
+				Interns: %d
+				""".formatted(report.getManagerCount(),
+					report.getEngineerCount(),
+					report.getInternCount()));
+
 	}
 }
