@@ -1,15 +1,14 @@
 public class Cake {
 
-	private String flavor = "vanilla";
-	private double price  = 29.99;
+	private String flavor;
+	private double price;
+
+	public Cake() {
+		this("vanilla");
+	}
 
 	public Cake(String flavor) {
 		setFlavor(flavor);
-	}
-
-	public Cake(String flavor, double price) {
-		setFlavor(flavor);
-		setPrice(price);
 	}
 
 	public void setFlavor(String flavor) {
