@@ -5,5 +5,9 @@ public class Main {
 		var cake = Answer.createCake();
 		var birthdayCake = Answer.createBirthdayCake();
 		var weddingCake = Answer.createWeddingCake();
+
+		System.out.println(cake.toString());
+		System.out.println(birthdayCake.toString());
+		System.out.println(weddingCake.toString());
 	}
 }
