@@ -6,8 +6,12 @@ public class Main {
 		var birthdayCake = Answer.createBirthdayCake();
 		var weddingCake = Answer.createWeddingCake();
 
-		System.out.println(cake.toString());
-		System.out.println(birthdayCake.toString());
-		System.out.println(weddingCake.toString());
+		String cakeObjectName = cake.getClass().getName();
+		String birthdayCakeObjectName = birthdayCake.getClass().getName();
+		String weddingCakeObjectName = weddingCake.getClass().getName();
+
+		System.out.println(cake.toString(cakeObjectName));
+		System.out.println(birthdayCake.toString(birthdayCakeObjectName));
+		System.out.println(weddingCake.toString(weddingCakeObjectName));
 	}
 }

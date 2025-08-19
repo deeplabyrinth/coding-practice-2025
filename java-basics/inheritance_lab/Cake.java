@@ -27,8 +27,8 @@ public class Cake {
 		return price;
 	}
 
-	@Override
-	public String toString() {
-		return String.format("...{flavor='%s', price='%f'}", flavor, price);
+	//Overload
+	public String toString(String objectName) {
+		return String.format("%s{flavor='%s', price='%f'}", objectName, flavor, price);
 	}
 }
