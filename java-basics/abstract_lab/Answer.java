@@ -20,9 +20,9 @@ public class Answer {
 
 		String[] sounds = new String[3];
 
-		sounds[0] = playFlute(flute);
-		sounds[1] = playHorn(horn);
-		sounds[2] = playViolin(violin);
+		sounds[0] = play(flute);
+		sounds[1] = play(horn);
+		sounds[2] = play(violin);
 
 		return sounds;
 	}
