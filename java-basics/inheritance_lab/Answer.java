@@ -1,6 +1,6 @@
 public class Answer {
 
-	public Cake createCake() {
+	public static Cake createCake() {
 
 		Cake cake = new Cake();
 		cake.setPrice(29.99);
@@ -8,7 +8,7 @@ public class Answer {
 		return cake;
 	}
 
-	public BirthdayCake createBirthdayCake() {
+	public static BirthdayCake createBirthdayCake() {
 
 		BirthdayCake birthdayCake = new BirthdayCake();
 		birthdayCake.setPrice(9.99);
@@ -16,7 +16,7 @@ public class Answer {
 		return birthdayCake;
 	}
 
-	public WeddingCake createWeddingCake() {
+	public static WeddingCake createWeddingCake() {
 
 		WeddingCake weddingCake = new WeddingCake();
 		weddingCake.setPrice(349.99);

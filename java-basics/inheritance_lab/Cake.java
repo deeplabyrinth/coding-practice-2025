@@ -26,4 +26,9 @@ public class Cake {
 	public double getPrice() {
 		return price;
 	}
+
+	@Override
+	public String toString() {
+		return String.format("...{flavor='%s', price='%f'}", flavor, price);
+	}
 }
