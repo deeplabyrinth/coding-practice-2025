@@ -33,4 +33,4 @@ Result:\
 * Forgot to implement the non-access modifier ```static``` to the helper methods in the helper class ```Answer```
 * In Java, ```this(...);``` inside a constructor is **constructor chaining**: it calls another constructor of the same class (**must be the first statement**). For ex. in ```Cake() { this("vanilla"); }```, the no-arg constructor delegates to ```Cake(String flavor), which then assigns "vanilla" to the ```flavor``` field. Same technique works with subclasses but uses ```super(...)``` instead, calling the constructor in the superclass
 
-##### Credit to Angie Jones [@angiejones](https://github.com/angiejones) for constructing the lab.
+### Credit to Angie Jones [@angiejones](https://github.com/angiejones) for constructing the lab.
