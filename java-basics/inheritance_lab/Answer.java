@@ -1,4 +1,4 @@
-public class Answer() {
+public class Answer {
 
 	public Cake createCake() {
 
