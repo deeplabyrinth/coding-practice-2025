@@ -20,10 +20,14 @@ public class Answer {
 
 		String[] sounds = new String[3];
 
-		sounds[0] = flute;
-		sounds[1] = horn;
-		sounds[2] = violin;
+		sounds[0] = playFlute(flute);
+		sounds[1] = playHorn(horn);
+		sounds[2] = playViolin(violin);
 
 		return sounds;
+	}
+
+	static String play(Instrument instrument) {
+		return instrument != null ? instrument.playSound() : null;
 	}
 }
