@@ -26,15 +26,19 @@ public class Main {
 			switch (menuInput) {
 				case '0':
 					System.out.println("TEST: Option 0 was selected");
+					Bank.createAccount(console);
 					break;
 				case '1':
 					System.out.println("TEST: Option 1 was selected");
+					// TODO: Bank.deposit();
 					break;
 				case '2':
 					System.out.println("TEST: Option 2 was selected");
+					//TODO: Bank.withdraw();
 					break;
 				case '3':
 					System.out.println("TEST: Option 3 was selected");
+					//TODO: Bank.checkBalance();
 					break;
 				case 'q':
 					System.out.println("TEST: Testing ended");
