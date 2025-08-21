@@ -1,4 +1,4 @@
-package methods_lab;
+package basics_lab;
 
 public class Main {
 
