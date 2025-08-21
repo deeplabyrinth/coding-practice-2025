@@ -12,6 +12,7 @@ public class Bank {
 		char userInput;
 
 		System.out.println("""
+
 				******************************
 				CREATE ACCOUNT
 				******************************
@@ -30,8 +31,8 @@ public class Bank {
 				break;
 			case '1':
 				System.out.println("<user selected savings>");
-				//account = new SavingsAccount();
-				//bank.add("savings", account);
+				account = new SavingsAccount();
+				bank.put("savings", account);
 				break;
 			case 'q':
 				System.out.println("<Cancelled account creation>");
