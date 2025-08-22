@@ -1,7 +1,7 @@
 public class Account {
 
-	private String accountType;
-	private double balance;
+	protected String accountType;
+	protected double balance;
 
 	public Account() {
 		this("unspecified");
@@ -26,5 +26,9 @@ public class Account {
 
 	public double getBalance() {
 		return balance;
+	}
+
+	public void deposit(double amount) {
+		System.out.println("Depositing from the superclass");
 	}
 }

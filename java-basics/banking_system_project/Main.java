@@ -30,7 +30,7 @@ public class Main {
 					break;
 				case '1':
 					System.out.println("TEST: Option 1 was selected");
-					// TODO: Bank.deposit();
+					Bank.deposit(console);
 					break;
 				case '2':
 					System.out.println("TEST: Option 2 was selected");
@@ -38,7 +38,7 @@ public class Main {
 					break;
 				case '3':
 					System.out.println("TEST: Option 3 was selected");
-					//TODO: Bank.checkBalance();
+					Bank.checkBalance();
 					break;
 				case 'q':
 					System.out.println("TEST: Testing ended");
