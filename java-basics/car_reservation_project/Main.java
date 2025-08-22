@@ -25,8 +25,8 @@ public class Main {
 			Select an option [q/quit]\s""";
 
 		Scanner console = new Scanner(System.in);
-
 		char command;
+
 		do {
 			System.out.print(commandInterface);
 			command = console.next().charAt(0);
@@ -38,7 +38,7 @@ public class Main {
 					break;
 				case '1':
 					System.out.println("Option 1 selected");
-					//CarReservationService.reserve();
+					CarReservationService.reserve(console);
 					break;
 				case 'q':
 					System.out.println("Application terminated");
