@@ -36,7 +36,8 @@ public class CarReservationService {
 		if (!isAvailable) {
 			System.out.println("Car not available. Returning to menu");
 		} else {
-			//TODO: Access the specified car and mark it as reserved
+
+			//TODO: Display the specified car and mark it as reserved if specified
 
 		}
 
