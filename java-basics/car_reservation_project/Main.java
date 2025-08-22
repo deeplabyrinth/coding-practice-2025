@@ -8,8 +8,9 @@ public class Main {
 		 * CarReservationService class is a controller that contains the filtering and
 		 * validation of available cars. The service filters by ID (allows user to select car 
 		 * that they want to reserve) and type (type of car for organization when viewing the 
-		 * inventory). Each Car has attributes based on its model, make, type, color, price, 
-		 * and whether or not it is reserved. The only action to perform on a Car is "reserve".
+		 * inventory). Each Car has attributes based on its ID, model, make, type, color, price, 
+		 * inventory, and whether or not it is reserved. The only action to perform on a 
+		 * Car is "reserve".
 		 */
 
 		//TODO: Create car reservation commands
@@ -46,5 +47,7 @@ public class Main {
 					System.out.println("Incorrect command, try again");
 			}
 		} while (command != 'q');
+
+		console.close();
 	}
 }
