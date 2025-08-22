@@ -86,8 +86,12 @@ public class Bank {
 						.filter(k -> k.contains("002"))
 						.forEach(k -> bank.get(k).deposit(amount));
 					break;
+				case 'q':
+					System.out.println("You cancelled making a deposit, returning to menu");
+					break;
 				default:
 					System.out.println("There was an error input");
+					break;
 			}
 		}
 	}

@@ -6,6 +6,7 @@ public class SavingsAccount extends Account {
 
 	@Override
 	public void deposit(double amount) {
+		balance = balance + amount;
 		System.out.println(String.format("\nYou just deposited $%.2f into your savings account", amount));
 	}
 }
