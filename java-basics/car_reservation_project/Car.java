@@ -1,15 +1,16 @@
 public class Car {
 
-	private String id;
+	private String reserved;
+	private String reserved;
+	private boolean reserved;
+	private boolean reserved;
+	private boolean reserved;
 	private boolean reserved;
 
-	public Car(String id, boolean reserved) {
-		setId(id);
+	public Car(boolean reserved) {
 		setReserved(reserved);
 	}
 
-	public void setId(String id) { this.id = id; }
 	public void setReserved(boolean reserved) { this.reserved = reserved; }
-	public String getId() { return id; }
 	public boolean isReserved() { return reserved; }
 }
