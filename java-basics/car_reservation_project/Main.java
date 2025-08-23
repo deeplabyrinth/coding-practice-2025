@@ -33,11 +33,11 @@ public class Main {
 
 			switch (command) {
 				case '0':
-					System.out.println("Option 0 selected");
-					//CarReservationService.show();
+					//System.out.println("Option 0 selected");
+					CarReservationService.show();
 					break;
 				case '1':
-					System.out.println("Option 1 selected");
+					//System.out.println("Option 1 selected");
 					CarReservationService.reserve(console);
 					break;
 				case 'q':

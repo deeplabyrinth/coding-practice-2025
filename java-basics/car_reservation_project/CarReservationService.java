@@ -22,6 +22,27 @@ public class CarReservationService {
 	}
 
 	static void show() {
+
+		//TODO: Display all vehicles and display the count of each car type
+		System.out.println(String.format("""
+					==============================
+					Inventory
+					==============================
+					About %d results\n""",
+					cars.size()));
+
+		cars.forEach((id, car) -> System.out.println(String.format("""
+						ID: %s
+						\t%s
+						\t%s %s
+						\t$%.2f
+						\treserved: %b""",
+						id,
+						car.getType(),
+						car.getMake(),
+						car.getModel(),
+						car.getPrice(),
+						car.isReserved())));
 	}
 
 	static void reserve(Scanner console) {
