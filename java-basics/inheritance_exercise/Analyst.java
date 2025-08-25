@@ -6,7 +6,7 @@ public class Analyst extends Employee {
 //    private double salary; INHERITED
 //    private int age; INHERITED
 
-    public Analyst(String name, double salary, int age) {
+    public Analyst(String name, int age, double salary) {
         super(name, age, salary);
     }
 
