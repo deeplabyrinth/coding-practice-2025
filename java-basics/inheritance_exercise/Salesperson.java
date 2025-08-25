@@ -1,41 +1,15 @@
 package inheritance_exercise;
 
-public class Salesperson {
+public class Salesperson extends Employee {
     //TODO: Generalize attributes name, salary, and age in a super class
-    private String name;
-    private double salary;
-    private int age;
+//    private String name; inherited from employee
+//    private double salary; inherited from employee
+//    private int age; intherited from employee
     private double commissionPercentage;
 
     public Salesperson(String name, double salary, int age, double commissionPercentage) {
-        setName(name);
-        setSalary(salary);
-        setAge(age);
+        super(name, age, salary);
         setCommissionPercentage(commissionPercentage);
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public double getSalary() {
-        return salary;
-    }
-
-    public void setSalary(double salary) {
-        this.salary = salary;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
     }
 
     public double getCommissionPercentage() {
