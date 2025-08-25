@@ -4,7 +4,7 @@ public class Main {
         return new PhoneEmailContact(name, number, email);
     }
 
-    public Contact createContact(String name, String information) {
+    public static Contact createContact(String name, String information) {
         if (information.contains("@gmail.com")) {
             return new EmailContact(name, information);
         } else {
