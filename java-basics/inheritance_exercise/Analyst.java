@@ -1,15 +1,13 @@
 package inheritance_exercise;
 
-public class Analyst {
+public class Analyst extends Employee {
     //TODO: Create a super class that includes general attributes
-    private String name;
-    private double salary;
-    private int age;
+//    private String name;
+//    private double salary;
+//    private int age;
 
     public Analyst(String name, double salary, int age) {
-        setName(name);
-        setSalary(salary);
-        setAge(age);
+        super(name, salary, age);
     }
 
     public String getName() {

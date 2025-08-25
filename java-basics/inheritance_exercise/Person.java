@@ -3,8 +3,8 @@ package inheritance_exercise;
 public class Person {
     //TODO: Establish generalized person attributes such as name and age
     // to be inherited by employee class
-    private String name;
-    private int age;
+    protected String name;
+    protected int age;
 
     public Person(String name, int age) {
         setName(name);
