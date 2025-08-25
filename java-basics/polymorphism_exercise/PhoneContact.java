@@ -6,6 +6,7 @@ public class PhoneContact extends Contact {
         setPhone(phone);
     }
 
+    @Override
     public String getPhone() {
         return phone;
     }

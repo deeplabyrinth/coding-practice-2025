@@ -1,11 +1,11 @@
 public class Main {
 
-    public Contact createContact(String name, String number, String email) {
+    public static Contact createContact(String name, String number, String email) {
         return new PhoneEmailContact(name, number, email);
     }
 
     public static Contact createContact(String name, String information) {
-        if (information.contains("@gmail.com")) {
+        if (information.contains("@")) {
             return new EmailContact(name, information);
         } else {
             return new PhoneContact(name, information);

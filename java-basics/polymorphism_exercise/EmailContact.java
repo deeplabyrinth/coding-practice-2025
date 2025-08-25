@@ -6,6 +6,7 @@ public class EmailContact extends Contact {
         setEmail(email);
     }
 
+    @Override
     public String getEmail() {
         return email;
     }

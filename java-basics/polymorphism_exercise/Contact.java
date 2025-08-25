@@ -12,4 +12,7 @@ public class Contact {
     public void setName(String name) {
         this.name = name;
     }
+
+    public String getEmail() { return null; };
+    public String getPhone() { return null; };
 }

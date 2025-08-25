@@ -8,6 +8,7 @@ public class PhoneEmailContact extends Contact {
         setEmail(email);
     }
 
+    @Override
     public String getPhone() {
         return phone;
     }
@@ -16,6 +17,7 @@ public class PhoneEmailContact extends Contact {
         this.phone = phone;
     }
 
+    @Override
     public String getEmail() {
         return email;
     }
