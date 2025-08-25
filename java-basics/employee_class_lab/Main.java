@@ -10,6 +10,8 @@ public class Main {
 		employees[0] = sally;
 		employees[1] = butch;
 
+		sally.raiseSalary();
+
 		int employeeCount = Employee.count();
 
 		System.out.println(String.format("Employee count: %d", employeeCount));

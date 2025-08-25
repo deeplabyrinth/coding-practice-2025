@@ -23,5 +23,9 @@ public class Employee {
 	public double getSalary() { return salary; }
 	public String getLocation() { return location; }
 
+	public void raiseSalary() {
+		salary = salary * 1.2;
+	}
+
 	static int count() { return count; }
 }
