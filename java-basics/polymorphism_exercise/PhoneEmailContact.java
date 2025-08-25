@@ -1,4 +1,4 @@
-public class PhoneEmailContact {
+public class PhoneEmailContact extends Contact {
     private String phone;
     private String email;
 
