@@ -1,7 +1,7 @@
 package inheritance_exercise;
 
 public class Salesperson {
-
+    //TODO: Generalize attributes name, salary, and age in a super class
     private String name;
     private double salary;
     private int age;
