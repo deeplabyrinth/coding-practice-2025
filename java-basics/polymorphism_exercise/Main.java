@@ -18,8 +18,15 @@ public class Main {
         Contact phoneContact = createContact("Dorothy", "777-777-7777");
         Contact emailContact = createContact("Peter", "pdiddy@gmail.com");
 
-        System.out.println("fullContact" + " ...");
-        System.out.println("phoneContact" + " ...");
-        System.out.println("emailContact" + " ...");
+        System.out.printf("Full contact: %s %s %s\n",
+                fullContact.getName(),
+                fullContact.getPhone(),
+                fullContact.getEmail());
+        System.out.printf("Phone contact: %s %s\n",
+                phoneContact.getName(),
+                phoneContact.getPhone());
+        System.out.printf("Email contact: %s %s\n",
+                emailContact.getName(),
+                emailContact.getEmail());
     }
 }
