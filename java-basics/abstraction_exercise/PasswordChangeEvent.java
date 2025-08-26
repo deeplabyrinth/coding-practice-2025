@@ -1,6 +1,6 @@
 import java.sql.Timestamp;
 
-public class PasswordChangeEvent {
+public class PasswordChangeEvent implements Event {
 
     private final Long createdTimeStamp;
     private final String id;

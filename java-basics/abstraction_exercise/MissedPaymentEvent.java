@@ -4,7 +4,7 @@ public class MissedPaymentEvent implements Event {
     private Long createdTimeStamp;
     private String id;
 
-    public AccountTransferEvent(String id) {
+    public MissedPaymentEvent(String id) {
         this.createdTimeStamp = new Timestamp(System
                 .currentTimeMillis()).getTime();
         this.id = id;
@@ -17,4 +17,5 @@ public class MissedPaymentEvent implements Event {
     public void process() {
         System.out.println("Customer " + id + " missed their payment. " +
                 "Sending a bill to the customer.");
+        }
 }
