@@ -1,18 +1,10 @@
 import java.sql.Timestamp;
 
-public class AccountTransferEvent implements Event {
-
-    private Long createdTimeStamp;
-    private String id;
+public class AccountTransferEvent extends AbstractEvent {
 
     public AccountTransferEvent(String id) {
-        this.createdTimeStamp = new Timestamp(System
-                .currentTimeMillis()).getTime();
-        this.id = id;
+        super(id);
     }
-
-    @Override
-    public Long getTimeStamp() { return this.createdTimeStamp; }
 
     @Override
     public void process() {
