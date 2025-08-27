@@ -9,8 +9,10 @@ public class Main {
 	}
 
 	static int[] incrementArray(int[] numbers) {
+		int[] result = new int[numbers.length];
+
 		for (int i = 0; i < numbers.length; ++i) {
-			numbers[i]++;
+			result[i] = numbers[i] + 1;
 		}
 
 		// Using stream operators
@@ -18,6 +20,6 @@ public class Main {
 			//.map(number -> number + 1)
 			//.toArray();
 
-		return numbers;
+		return result;
 	}
 }
