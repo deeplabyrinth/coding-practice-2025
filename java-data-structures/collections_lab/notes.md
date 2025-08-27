@@ -1,0 +1,11 @@
+### Collections notes
+- most data strucures implement the collections interface
+- list, queue, and set interfaces all extend the collections interface
+- java 21 provides sequenced collection
+- arrayList, priorityQueue, and Hashset classes implement the above interfaces
+- the collections framework is the backbone of java
+	- consistent api and have easy to remember methods
+	- add(), remove(), clear(), size(), contains(), isEmpty()
+- above the collections interface is the super interface 'iterable'
+- collections can change in size
+- they can't hold primitive types
