@@ -3,6 +3,8 @@ import java.util.List;
 
 public class EmployeeDAOImpl implements EmployeeDAO {
 
+    // This is the class that were going to instantiate when we want to persist
+    // information to our relational database.
     @Override
     public Employee get(int id) throws SQLException {
         return null;
