@@ -1,3 +1,3 @@
-public interface employeeDAO extends DAO<Employee> {
+public interface EmployeeDAO extends DAO<Employee> {
 
 }
