@@ -19,9 +19,14 @@ public class Main {
 
         AuthorDAO authorDAO = new AuthorDAOImpl();
 
-        Author author = authorDAO.get(2);
+        Author author = authorDAO.get(3);
 
         System.out.println(author);
+
+        author = new Author(0, "George", "Orwell", "India");
+        int result = authorDAO.insert(author);
+
+        System.out.println(result);
     }
 
 }

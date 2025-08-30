@@ -41,7 +41,20 @@ public class AuthorDAOImpl implements AuthorDAO {
 
     @Override
     public int insert(Author author) throws SQLException {
-        return 0;
+        Connection connection = Database.getConnection();
+        String sql = "INSERT INTO authors (name_last, name_first, country) VALUES (?, ?, ?)";
+        PreparedStatement ps = connection.prepareStatement(sql);
+
+        ps.setString(1, author.getFirstName());
+        ps.setString(2, author.getLastName());
+        ps.setString(3, author.getCountry());
+
+        int result = ps.executeUpdate(); // returns how many records were successfully entered
+
+        ps.close();
+        connection.close();
+
+        return result;
     }
 
     @Override
