@@ -11,11 +11,17 @@ public class Main {
 
 //        System.out.println(author);
 
-        Connection connection = Database.getConnection();
+//        Connection connection = Database.getConnection();
+//
+//        if (connection != null) {
+//            System.out.println("Database connection established");
+//        }
 
-        if (connection != null) {
-            System.out.println("Database connection established");
-        }
+        AuthorDAO authorDAO = new AuthorDAOImpl();
+
+        Author author = authorDAO.get(2);
+
+        System.out.println(author);
     }
 
 }
