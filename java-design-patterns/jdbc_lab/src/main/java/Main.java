@@ -17,16 +17,27 @@ public class Main {
 //            System.out.println("Database connection established");
 //        }
 
-        AuthorDAO authorDAO = new AuthorDAOImpl();
+//        AuthorDAO authorDAO = new AuthorDAOImpl();
+//
+//        Author author = authorDAO.get(3);
+//
+//        System.out.println(author);
+//
+//        author = new Author(0, "George", "Orwell", "India");
+//        int result = authorDAO.insert(author);
+//
+//        System.out.println(result);
 
-        Author author = authorDAO.get(3);
+//        AuthorDAO authorDAO = new AuthorDAOImpl();
+//        Author author = authorDAO.get(3);
+//
+//        System.out.println(author);
+//
+//        int result = authorDAO.delete(author);
+//        System.out.println(result);
 
-        System.out.println(author);
 
-        author = new Author(0, "George", "Orwell", "India");
-        int result = authorDAO.insert(author);
 
-        System.out.println(result);
     }
 
 }

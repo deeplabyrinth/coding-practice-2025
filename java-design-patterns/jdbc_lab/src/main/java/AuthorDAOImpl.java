@@ -59,11 +59,34 @@ public class AuthorDAOImpl implements AuthorDAO {
 
     @Override
     public int update(Author author) throws SQLException {
-        return 0;
+        Connection connection = Database.getConnection();
+        String sql = "UPDATE authors SET name_last=?, name_first=?, country=? WHERE author_id=?";
+
+        PreparedStatement ps = connection.prepareStatement(sql);
+        ps.setString(1, author.getFirstName());
+        ps.setString(2, author.getLastName());
+        ps.setString(3, author.getCountry());
+        ps.setInt(4, author.getAuthorId());
+
+        int result = ps.executeUpdate();
+        ps.close();
+        connection.close();
+
+        return result;
     }
 
     @Override
-    public int delete(int id) throws SQLException {
-        return 0;
+    public int delete(Author author) throws SQLException {
+        Connection connection = Database.getConnection();
+        String sql = "DELETE FROM authors WHERE author_id=?";
+
+        PreparedStatement ps = connection.prepareStatement(sql);
+        ps.setInt(1, author.getAuthorId());
+
+        int result = ps.executeUpdate();
+        ps.close();
+        connection.close();
+
+        return result;
     }
 }

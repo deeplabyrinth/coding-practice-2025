@@ -7,5 +7,5 @@ public interface DAO<T> {
     int save(T t) throws SQLException;
     int insert(T t) throws SQLException;
     int update(T t) throws SQLException;
-    int delete(int id) throws SQLException;
+    int delete(T t) throws SQLException;
 }
