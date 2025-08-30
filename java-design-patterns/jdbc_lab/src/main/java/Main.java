@@ -1,6 +1,8 @@
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.SQLOutput;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
 
@@ -36,6 +38,12 @@ public class Main {
 //        int result = authorDAO.delete(author);
 //        System.out.println(result);
 
+
+        AuthorDAO authorDAO = new AuthorDAOImpl();
+
+        List<Author> authors = authorDAO.getAll();
+
+        authors.forEach(System.out::println);
 
 
     }

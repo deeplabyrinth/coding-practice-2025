@@ -2,6 +2,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class AuthorDAOImpl implements AuthorDAO {
@@ -31,7 +32,22 @@ public class AuthorDAOImpl implements AuthorDAO {
 
     @Override
     public List<Author> getAll() throws SQLException {
-        return List.of();
+        Connection connection = Database.getConnection();
+        String sql = "SELECT author_id, name_last, name_first, country FROM authors";
+
+        PreparedStatement ps = connection.prepareStatement(sql);
+        ResultSet rs = ps.executeQuery();
+
+        List<Author> authors = new ArrayList<>();
+        while (rs.next()) {
+            int authorId = rs.getInt("author_id");
+            String lastName = rs.getString("name_last");
+            String firstName = rs.getString("name_first");
+            String country = rs.getString("country");
+            authors.add(new Author(authorId, lastName, firstName, country));
+        }
+
+        return authors;
     }
 
     @Override
