@@ -1,10 +1,10 @@
-public class Author {
+public class T {
     private int authorId;
     private String firstName;
     private String lastName;
     private String country;
 
-    public Author(int authorId, String firstName, String lastName, String country) {
+    public T(int authorId, String firstName, String lastName, String country) {
         setAuthorId(authorId);
         setFirstName(firstName);
         setLastName(lastName);
