@@ -39,11 +39,16 @@ public class Main {
 //        System.out.println(result);
 
 
-        AuthorDAO authorDAO = new AuthorDAOImpl();
+//        AuthorDAO authorDAO = new AuthorDAOImpl();
+//
+//        List<Author> authors = authorDAO.getAll();
+//
+//        authors.forEach(System.out::println);
 
-        List<Author> authors = authorDAO.getAll();
+        BookDAO bookDAO = new BookDAOImpl();
+        Book book = bookDAO.get(2);
 
-        authors.forEach(System.out::println);
+        System.out.println(book);
 
 
     }
