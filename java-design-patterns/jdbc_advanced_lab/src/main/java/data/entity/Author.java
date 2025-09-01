@@ -8,6 +8,7 @@ public class Author {
     private String lastName;
     private String country;
 
+    public Author() {}
     public Author(UUID authorId, String firstName, String lastName, String country) {
         this.authorId = authorId;
         this.firstName = firstName;
