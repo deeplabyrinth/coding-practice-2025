@@ -14,6 +14,7 @@ public class AuthorDao implements Dao<Author, UUID> {
     private static final Logger LOGGER = Logger.getLogger(AuthorDao.class.getName());
     private static final String GET_ALL = "select author_id, last_name, first_name, country from authors";
     private static final String CREATE = "insert into authors (author_id, last_name, first_name, country) values (?,?,?,?)";
+    private static final String GET_ONE = "select author_id, last_name, first_name, country from authors where author_id = ?";
 
     @Override
     public List<Author> getAll() {
@@ -66,6 +67,20 @@ public class AuthorDao implements Dao<Author, UUID> {
 
     @Override
     public Optional<Author> getOne(UUID uuid) {
+        try (
+                Connection connection = DatabaseUtils.getConnection();
+                PreparedStatement statement = connection.prepareStatement(GET_ONE);
+        ) {
+            statement.setObject(1, uuid);
+            ResultSet rs = statement.executeQuery();
+            List<Author> authors = this.processResultSet(rs);
+            if (authors.isEmpty()) {
+                return Optional.empty();
+            }
+            return Optional.of(authors.get(0));
+        } catch (SQLException e) {
+            DatabaseUtils.handleSQLException("AuthorDao.getOne", e, LOGGER);
+        }
         return Optional.empty();
     }
 
@@ -85,8 +100,8 @@ public class AuthorDao implements Dao<Author, UUID> {
         while (rs.next()) {
             Author author = new Author();
             author.setAuthorId((UUID)rs.getObject("author_id"));
-            author.setLastName(rs.getString("name_last"));
-            author.setFirstName(rs.getString("name_first"));
+            author.setLastName(rs.getString("last_name"));
+            author.setFirstName(rs.getString("first_name"));
             author.setCountry(rs.getString("country"));
 
             authors.add(author);
